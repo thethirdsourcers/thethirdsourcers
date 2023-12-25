@@ -1,0 +1,6 @@
+$displays: 'flex', 'inline-flex', 'grid', 'block', 'none';
+@each $display in $displays {
+	.d-#{$display} {
+		display: #{$display}
+	};
+}

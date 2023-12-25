@@ -1,0 +1,20 @@
+header {
+	background: var(--clr-white500);
+	padding-block: clamp(1.25rem, 4vh + 0.25rem, 3rem);
+
+
+	.container {
+		grid-template-columns: auto auto;
+		place-items: center;
+		place-content: space-between;
+	}
+
+	.logo-container {
+		color: var(--clr-primary500);
+		transition: color 0.5s ease-in-out;
+
+		&:hover {
+			color: var(--clr-primary700);
+		}
+	}
+}

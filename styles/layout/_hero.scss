@@ -1,0 +1,47 @@
+.hero {
+	--dot-bg: var(--clr-light500);
+	--dot-color: rgb(0 0 0 / .1);
+	--dot-size: 1px;
+	--dot-space: .25rem;
+
+	background: linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space), 
+	linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+	var(--dot-color);
+	padding-block: clamp(1rem, 13.5vh, 12.5rem);
+
+	.container {
+		gap: 2rem;
+	}
+
+	h1 {
+		width: min(100%, 28ch);
+		text-wrap: balance;
+		font-weight: 900;
+
+		span {
+			--_height: .75rem;
+			position: relative;
+			isolation: isolate;
+
+			&::after {
+				content: "";
+				position: absolute;
+				left: .25rem;
+				bottom: calc(var(--_height) - .25rem);
+				width: 100%;
+				height: var(--_height);
+				translate: calc(var(--_height) / -2);
+				background: var(--clr-primary500);
+				opacity: 0.15;
+			}
+		}
+	}
+
+	p {
+		font-size: clamp(1rem, 1.5vw + .125rem, 2.15rem);
+		width: min(100%, 60ch);
+		text-wrap: balance;
+	}
+}
+
+

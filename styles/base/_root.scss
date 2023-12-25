@@ -1,0 +1,12 @@
+@use '../abstract' as *;
+
+:root {
+	@each $colorScheme, $colorThemeMap in $colorSchemes {
+		@each $colorKeyName, $colorKeyValue in $colorThemeMap {
+			--clr-#{$colorScheme}#{$colorKeyName}: #{$colorKeyValue}
+		}
+	}
+
+	--systemFont: #{$systemUIFont}, #{$fallbackFont};
+	--headerFont: #{$customFont}, #{$fallbackFont};
+}

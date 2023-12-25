@@ -1,0 +1,63 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+	scroll-behavior: smooth;
+}
+
+body {
+	@extend html;
+	color: var(--clr-dark500);
+	font-family: var(--systemFont);
+	line-height: 1.5;
+
+}
+
+img {
+	max-width: 100%;
+	line-height: 1;
+	vertical-align: middle;
+	font-style: italic;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+@for $header from 1 through 6 {
+	h#{$header} {
+		font-family: var(--headerFont);
+		font-weight: 600;
+		line-height: 1.25;
+	}
+}
+
+h1 {
+	font-size: clamp(1.25rem, 5vw + .25rem, 3rem)
+}
+
+
+section {
+	&:not(.hero) {
+		padding-block: clamp(1.5rem, 7vh, 5rem);
+	}
+}
+
+
+.container {
+	width: min(100%, 82rem);
+	margin: 0 auto;
+	padding-inline: 1rem;
+}
+
+.summarized {
+	font-size: calc(1rem + 2px);
+}
