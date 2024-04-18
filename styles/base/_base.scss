@@ -7,14 +7,15 @@
 html {
 	height: 100%;
 	scroll-behavior: smooth;
+	color-scheme: light;
 }
 
 body {
-	@extend html;
-	color: var(--clr-dark500);
+	height: 100%;
+	color: var(--bodyFontColor);
 	font-family: var(--systemFont);
 	line-height: 1.5;
-
+	text-rendering: geometricPrecision;
 }
 
 img {
@@ -30,6 +31,19 @@ a {
 
 ul {
 	list-style: none;
+}
+
+@media (prefers-color-scheme: 'dark') {
+	:root {
+		--bodyFontColor: var(--clr-light200);
+		--sectionBackdrop: var(--clr-dark500);
+		--logoFillPrimary: var(--clr-primary200);
+		--logoFillDark: var(--clr-primary500)
+	}
+
+	html {
+		color-scheme: dark
+	}
 }
 
 @for $header from 1 through 6 {

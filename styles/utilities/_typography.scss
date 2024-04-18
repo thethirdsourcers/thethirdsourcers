@@ -19,3 +19,9 @@ $textAligns: 'center', 'justify';
 .text-balance {
 	text-wrap: balance;
 }
+
+@media (prefers-color-scheme: dark) {
+	.text-primary700 {
+		color: var(--clr-primary200)
+	}
+}

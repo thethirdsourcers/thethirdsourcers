@@ -45,3 +45,8 @@
 }
 
 
+@media (prefers-color-scheme: dark) {
+	.hero {
+		--dot-bg: var(--clr-dark900)
+	}
+}

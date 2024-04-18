@@ -9,4 +9,9 @@
 
 	--systemFont: #{$systemUIFont}, #{$fallbackFont};
 	--headerFont: #{$customFont}, #{$fallbackFont};
+	--bodyFontColor: var(--clr-dark500);
+	--sectionBackdrop: var(--clr-light200);
+	--logoFillPrimary: var(--clr-primary500);
+	--logoFillDark: var(--clr-primary700)
 }
+
