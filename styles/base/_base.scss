@@ -1,77 +1,81 @@
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-	height: 100%;
-	scroll-behavior: smooth;
-	color-scheme: light;
+  height: 100%;
+  scroll-behavior: smooth;
+  color-scheme: light;
 }
 
 body {
-	height: 100%;
-	color: var(--bodyFontColor);
-	font-family: var(--systemFont);
-	line-height: 1.5;
-	text-rendering: geometricPrecision;
+  height: 100%;
+  color: var(--bodyFontColor);
+  font-family: var(--systemFont);
+  line-height: 1.5;
+  text-rendering: geometricPrecision;
+  background-color: var(--bodyBackgroundColor);
 }
 
 img {
-	max-width: 100%;
-	line-height: 1;
-	vertical-align: middle;
-	font-style: italic;
+  max-width: 100%;
+  line-height: 1;
+  vertical-align: middle;
+  font-style: italic;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 ul {
-	list-style: none;
+  list-style: none;
 }
 
-@media (prefers-color-scheme: 'dark') {
-	:root {
-		--bodyFontColor: var(--clr-light200);
-		--sectionBackdrop: var(--clr-dark500);
-		--logoFillPrimary: var(--clr-primary200);
-		--logoFillDark: var(--clr-primary500)
-	}
+@media (prefers-color-scheme: "dark") {
+  :root {
+    --bodyBackgroundColor: var(--clr-primary900);
+    --bodyFontColor: var(--clr-light200);
+    --sectionBackdrop: var(--clr-dark800);
+    --logoFillPrimary: var(--clr-light200);
+    --logoFillDark: var(--clr-primary700);
+  }
 
-	html {
-		color-scheme: dark
-	}
+  html {
+    color-scheme: dark;
+  }
 }
 
 @for $header from 1 through 6 {
-	h#{$header} {
-		font-family: var(--headerFont);
-		font-weight: 600;
-		line-height: 1.25;
-	}
+  h#{$header} {
+    font-family: var(--headerFont);
+    font-weight: 600;
+    line-height: 1.25;
+  }
 }
 
 h1 {
-	font-size: clamp(1.25rem, 5vw + .25rem, 3rem)
+  font-size: clamp(1.25rem, 5vw + 0.25rem, 3rem);
 }
-
 
 section {
-	&:not(.hero) {
-		padding-block: clamp(1.5rem, 7vh, 5rem);
-	}
+  &:not(.hero) {
+    padding-block: clamp(1.5rem, 7vh, 5rem);
+  }
 }
 
-
 .container {
-	width: min(100%, 82rem);
-	margin: 0 auto;
-	padding-inline: 1rem;
+  width: min(100%, 82rem);
+  margin: 0 auto;
+  padding-inline: 1rem;
 }
 
 .summarized {
-	font-size: calc(1rem + 2px);
+  font-size: calc(1rem + 2px);
+}
+
+p {
+  text-wrap: balance;
 }

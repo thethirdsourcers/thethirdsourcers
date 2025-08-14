@@ -1,17 +1,17 @@
-@use '../abstract' as *;
+@use "../abstract" as *;
 
 :root {
-	@each $colorScheme, $colorThemeMap in $colorSchemes {
-		@each $colorKeyName, $colorKeyValue in $colorThemeMap {
-			--clr-#{$colorScheme}#{$colorKeyName}: #{$colorKeyValue}
-		}
-	}
+  @each $colorScheme, $colorThemeMap in $colorSchemes {
+    @each $colorKeyName, $colorKeyValue in $colorThemeMap {
+      --clr-#{$colorScheme}#{$colorKeyName}: #{$colorKeyValue};
+    }
+  }
 
-	--systemFont: #{$systemUIFont}, #{$fallbackFont};
-	--headerFont: #{$customFont}, #{$fallbackFont};
-	--bodyFontColor: var(--clr-dark500);
-	--sectionBackdrop: var(--clr-light200);
-	--logoFillPrimary: var(--clr-primary500);
-	--logoFillDark: var(--clr-primary700)
+  --systemFont: #{$systemUIFont}, #{$fallbackFont};
+  --headerFont: #{$customFont}, #{$fallbackFont};
+  --bodyFontColor: var(--clr-dark700);
+  --sectionBackdrop: var(--clr-light200);
+  --logoFillPrimary: var(--clr-primary700);
+  --logoFillDark: var(--clr-primary900);
+  --bodyBackgroundColor: var(--clr-light100);
 }
-

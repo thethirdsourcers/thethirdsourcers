@@ -1,103 +1,106 @@
 %toggleMenuPseudos {
-	content: "";
-	position: absolute;
-	width: 0.75rem;
-	height: .25rem;
-	background: var(--logoFillPrimary);
-	z-index: 1;
-	transition: all .2s ease-in-out;
-	border-radius: .5rem;
+  content: "";
+  position: absolute;
+  width: 0.75rem;
+  height: 0.25rem;
+  background: var(--logoFillPrimary);
+  z-index: 1;
+  transition: all 0.2s ease-in-out;
+  border-radius: 0.5rem;
 }
 
 header {
-	background: var(--clr-white500);
-	padding-block: clamp(1.25rem, 4vh + 0.25rem, 3rem);
-	
-	.container {
-		grid-template-columns: repeat(2, auto);
-		align-items: center;
-		justify-content: space-between;
-		container-type: inline-size;
-	}
+  background: var(--clr-white500);
+  padding-block: 1rem;
 
-	.logo-container {
-		color: var(--logoFillPrimary);
-		transition: color 0.5s ease-in-out;
+  .container {
+    grid-template-columns: repeat(2, auto);
+    align-items: center;
+    justify-content: space-between;
+    container-type: inline-size;
+  }
 
-		&:hover {
-			color: var(--logoFillDark);
-		}
-	}
+  .logo-container {
+    width: 15rem;
+    aspect-ratio: 5;
+    background-color: var(--logoFillPrimary);
+    mask-image: url("../images/logo.svg");
+    mask-size: cover;
+    transition: color 0.5s ease-in-out;
 
-	&:not(:has(#toggle-menu-checkbox:checked)) {
-		nav {
-			display: none;
-		}
-	}
+    &:hover {
+      color: var(--logoFillDark);
+    }
+  }
+
+  &:not(:has(#toggle-menu-checkbox:checked)) {
+    nav {
+      display: none;
+    }
+  }
 }
 
 .toggle-menu {
-	height: 1.5rem;
-	align-items: center;
-	cursor: pointer;
-	position: relative;
+  height: 1.5rem;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
 
-	input {
-		opacity: 0;
-		position: absolute;
-		z-index: -1;
-	}
+  input {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+  }
 
-	span {
-		--rotation: 45deg;
+  span {
+    --rotation: 45deg;
 
-		width: 1.5rem;
-		height: .25rem;
-		background: var(--logoFillPrimary);
-		display: inline-block;
-		position: relative;
-		border-radius: .5rem;
+    width: 1.5rem;
+    height: 0.25rem;
+    background: var(--logoFillPrimary);
+    display: inline-block;
+    position: relative;
+    border-radius: 0.5rem;
 
-		&::before {
-			@extend %toggleMenuPseudos;
-			top: -10px;
-			left: 0;
-		}
+    &::before {
+      @extend %toggleMenuPseudos;
+      top: -10px;
+      left: 0;
+    }
 
-		&::after {
-			@extend %toggleMenuPseudos;
-			right: 0;
-			bottom: -10px;
-		}
-	}
+    &::after {
+      @extend %toggleMenuPseudos;
+      right: 0;
+      bottom: -10px;
+    }
+  }
 }
 
 #toggle-menu-checkbox:checked {
-	& +  span {
-		rotate: var(--rotation);
+  & + span {
+    rotate: var(--rotation);
 
-		&::before {
-			rotate: calc(var(--rotation) * 2);
-			top: -6px;
-			left: 6px;
-		}
-		&::after {
-			rotate: calc(var(--rotation) * 2);
-			bottom: -6px;
-			right: 6px;
-		}
-	}
+    &::before {
+      rotate: calc(var(--rotation) * 2);
+      top: -6px;
+      left: 6px;
+    }
+    &::after {
+      rotate: calc(var(--rotation) * 2);
+      bottom: -6px;
+      right: 6px;
+    }
+  }
 }
 
-
 @container (min-width: 768px) {
-	.toggle-menu {
-		display: none;
-	}
+  .toggle-menu {
+    display: none;
+  }
 
-	header {
-		nav {
-			display: inline-flex !important;
-		}
-	}
+  header {
+    nav {
+      display: inline-flex !important;
+    }
+  }
 }

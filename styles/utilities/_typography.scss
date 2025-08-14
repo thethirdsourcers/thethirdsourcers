@@ -1,27 +1,27 @@
 @use "../abstract" as *;
 
-$textAligns: 'center', 'justify';
+$textAligns: "center", "justify";
 
 @each $textAlign in $textAligns {
-	.text-#{$textAlign} {
-		text-align: #{$textAlign};
-	}
+  .text-#{$textAlign} {
+    text-align: #{$textAlign};
+  }
 }
 
 @each $colorScheme, $colorThemeMap in $colorSchemes {
-	@each $colorKeyName, $colorKeyValue in $colorThemeMap {
-		.text-#{$colorScheme}#{$colorKeyName} {
-			color: var(--clr-#{$colorScheme}#{$colorKeyName})
-		}
-	}
+  @each $colorKeyName, $colorKeyValue in $colorThemeMap {
+    .text-#{$colorScheme}#{$colorKeyName} {
+      color: var(--clr-#{$colorScheme}#{$colorKeyName});
+    }
+  }
 }
 
 .text-balance {
-	text-wrap: balance;
+  text-wrap: balance;
 }
 
 @media (prefers-color-scheme: dark) {
-	.text-primary700 {
-		color: var(--clr-primary200)
-	}
+  .text-primary700 {
+    color: var(--clr-primary300);
+  }
 }
