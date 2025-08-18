@@ -198,8 +198,9 @@ $thirdRow: 10;
 
   figure {
     width: 100%;
-    aspect-ratio: 1.93;
+    aspect-ratio: 16/11;
     background: var(--clr-light200);
+    border: 4px solid rgb(255 255 255 / 0.005);
     border-radius: 0.75rem;
     margin-block-end: 0.75rem;
     position: relative;
