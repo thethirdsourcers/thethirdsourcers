@@ -23,7 +23,6 @@
   }
 
   h1 {
-    width: min(100%, 28ch);
     text-wrap: balance;
     font-weight: 900;
 
@@ -46,10 +45,18 @@
     }
   }
 
-  p {
+  p:not(.summarized) {
     font-size: clamp(1rem, 1.5vw + 0.125rem, 2.15rem);
-    width: min(100%, 60ch);
-    text-wrap: balance;
+  }
+
+  &:not(.about-us) {
+    h1 {
+      width: min(100%, 28ch);
+    }
+
+    p {
+      width: min(100%, 60ch);
+    }
   }
 }
 
