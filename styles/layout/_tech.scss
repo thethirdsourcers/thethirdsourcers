@@ -230,9 +230,10 @@ $thirdRow: 10;
     font-family: var(--system-font);
 
     a {
-      font-size: 1.5rem;
+      font-size: clamp(1.125rem, 4vw, 1.5rem);
       margin-block-start: 0.5rem;
       color: var(--clr-primary300);
+      word-break: break-all;
     }
   }
 }
