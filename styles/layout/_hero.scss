@@ -16,10 +16,10 @@
       )
       center / var(--dot-space) var(--dot-space),
     var(--dot-color);
-  padding-block: clamp(1rem, 13.5vh, 12.5rem);
+  padding-block: clamp(3rem, 10vh, 12.5rem);
 
   .container {
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
   h1 {

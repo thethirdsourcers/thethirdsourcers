@@ -12,6 +12,9 @@
 header {
   background: var(--clr-white500);
   padding-block: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 
   .container {
     grid-template-columns: repeat(2, auto);
@@ -33,9 +36,21 @@ header {
     }
   }
 
-  &:not(:has(#toggle-menu-checkbox:checked)) {
+  nav {
+    grid-column: 1 / -1;
+    overflow: hidden;
+    transition: grid-template-rows 0.3s ease-in-out;
+    display: grid;
+    grid-template-rows: 0fr;
+
+    ul {
+      min-height: 0;
+    }
+  }
+
+  &:has(#toggle-menu-checkbox:checked) {
     nav {
-      display: none;
+      grid-template-rows: 1fr;
     }
   }
 }
@@ -100,6 +115,8 @@ header {
 
   header {
     nav {
+      grid-column: auto;
+      grid-template-rows: 1fr;
       display: inline-flex !important;
     }
   }
