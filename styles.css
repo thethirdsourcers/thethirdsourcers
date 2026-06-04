@@ -187,11 +187,12 @@ p{ text-wrap:pretty; }
 
 /* ---------- marquee ---------- */
 .marquee{ overflow:hidden; border-block:1px solid var(--line); background:var(--bg-warm); padding-block:clamp(18px,1.3em,30px); line-height:1.5; }
-.marquee .track{ display:flex; gap:64px; width:max-content; animation:scroll-x 32s linear infinite; align-items:center; }
-.marquee .track span{ font-size:1.05rem; font-weight:600; color:var(--ink-soft); display:inline-flex; align-items:center; gap:14px; white-space:nowrap; letter-spacing:-0.01em; line-height:1.5; }
+.marquee .track{ display:flex; width:max-content; animation:scroll-x 32s linear infinite; align-items:center; }
+.marquee .track span{ font-size:1.05rem; font-weight:600; color:var(--ink-soft); display:inline-flex; align-items:center; gap:14px; white-space:nowrap; letter-spacing:-0.01em; line-height:1.5; margin-inline-end:64px; }
 .marquee .track span::after{ content:"·"; color:var(--violet); font-size:1.4rem; }
 @keyframes scroll-x{ to{ transform:translateX(-50%); } }
-@media (prefers-reduced-motion: reduce){ .marquee .track{ animation:none; } }
+/* keep the marquee gently moving even when reduced motion is requested */
+@media (prefers-reduced-motion: reduce){ .marquee .track{ animation-duration:80s; } }
 
 /* ---------- services ---------- */
 .svc-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:18px; margin-top:54px; }
