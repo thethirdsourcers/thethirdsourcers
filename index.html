@@ -1,277 +1,449 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#405FCF" />
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Third Sourcers — Software teams that build with you</title>
+<meta name="description" content="The Third Sourcers is a software studio building web, mobile and SaaS products — and the remote engineering teams behind them. People-first delivery from idea to launch.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="assets/logo-mark.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-    <meta
-      name="keywords"
-      content="Remote staffing, product development, hiring, freelancers, application, branding, UI/UX, design, development, tech, software, Nepal, Kathmandu, Lalitpur, remote work, team, global, talent pool, digital marketing, code"
-    />
-    <meta
-      name="description"
-      content="the third sourcers provide team of experienced and skilled developers who are proficient in various technologies which enables delivery high-quality solutions through remote staffing"
-    />
-    <title>The Third Sourcers</title>
+<!-- ===================== HEADER ===================== -->
+<header class="site-header" id="header">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="The Third Sourcers home">
+      <img src="assets/logo-mark.svg" alt="">
+      <span class="bname">The Third Sourcers<small>Software · Teams · Sourcing</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#process">How we work</a>
+      <a href="#work">Work</a>
+      <a href="#why">Why us</a>
+      <a href="#engage">Engagement</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-ghost">Contact</a>
+      <a href="#contact" class="btn btn-primary">Book a call
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
 
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-56BQBFQD");
-    </script>
-    <!-- End Google Tag Manager -->
+<!-- mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mm-top">
+    <a class="brand" href="#top"><img src="assets/logo-mark.svg" alt="" style="height:38px"><span class="bname">The Third Sourcers</span></a>
+    <button class="mm-close" id="mmClose" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#process">How we work</a>
+    <a href="#work">Work</a>
+    <a href="#why">Why us</a>
+    <a href="#engage">Engagement</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a href="#contact" class="btn btn-primary btn-lg">Book a call</a>
+</div>
 
-    <link
-      rel="icon"
-      href="Favicon.svg"
-      type="image/svg+xml"
-      media="(prefers-color-scheme: light)"
-    />
-    <link
-      rel="icon"
-      href="Favicon-white.svg"
-      type="image/svg+xml"
-      media="(prefers-color-scheme: dark)"
-    />
-    <link rel="icon" href="favicon.ico" />
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-    <link rel="stylesheet" href="./styles/styles.css?v=1.0.1" type="text/css" />
-  </head>
-  <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-      <iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-56BQBFQD"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe>
-    </noscript>
-    <!-- End Google Tag Manager (noscript) -->
+<main id="top">
 
-    <header id="main">
-      <div class="d-grid container">
-        <a
-          class="logo-container"
-          aria-label="The Third Sourcers Home"
-          href="index.html"
-        >
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow reveal">Remote software teams · since day one</span>
+      <h1 class="display reveal d1">We build the software, <span class="serif-em">you grow</span> the business.</h1>
+      <p class="lead reveal d2">The Third Sourcers is a product studio and a team you can borrow. Web apps, mobile, SaaS — designed, engineered and shipped by people who treat your roadmap like their own.</p>
+      <div class="hero-cta reveal d3">
+        <a href="#contact" class="btn btn-primary btn-lg">Book a free call
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-
-        <label for="toggle-menu-checkbox" class="toggle-menu d-flex">
-          <input type="checkbox" id="toggle-menu-checkbox" />
-          <span></span>
-        </label>
-
-        <nav>
-          <ul class="d-flex">
-            <li><a href="./about.html">About</a></li>
-            <!-- <li><a href="./co-working-space.html">Co-working Space</a></li> -->
-          </ul>
-        </nav>
+        <a href="#work" class="btn btn-ghost btn-lg">See our work</a>
       </div>
-    </header>
+    </div>
 
-    <section
-      class="hero"
-      aria-labelledby="Accelerate product development cycle"
-    >
-      <div class="d-grid container">
-        <h1 class="text-primary700">
-          <span>Accelerate</span> product development cycles and
-          <span>reduce costs</span>
-        </h1>
-        <p class="text-balance">
-          Tap into a global talent pool while providing flexibility and cost
-          savings through reduced overhead expenses
-        </p>
+    <div class="hero-visual reveal d2">
+      <div class="glass-card">
+        <img class="shot" src="images/snapmycv.webp" alt="SnapMyCV — a resume builder product we designed and built" width="1600" height="1000" fetchpriority="high">
+      </div>
+      <div class="stat-float" style="top:-26px; left:-30px;">
+        <div class="dot-ico" style="background:var(--bg-lilac);color:var(--violet)">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <div><div class="n">Always-on</div><div class="l">Time-zone aligned delivery</div></div>
+      </div>
+      <div class="stat-float" style="bottom:-28px; right:-22px;">
+        <div class="dot-ico" style="background:var(--terra-tint);color:var(--terra)">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+        </div>
+        <div><div class="n">Idea → launch</div><div class="l">Full product ownership</div></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <a href="#" class="btn is-cta d-inline-flex">
-          Let's Talk
-          <i>&#9990;</i>
+<!-- ===================== MARQUEE ===================== -->
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>Web Apps</span><span>iOS &amp; Android</span><span>SaaS Platforms</span><span>UI / UX Design</span><span>Cloud &amp; DevOps</span><span>QA &amp; Testing</span><span>Dedicated Teams</span><span>Digital Marketing</span>
+    <span>Web Apps</span><span>iOS &amp; Android</span><span>SaaS Platforms</span><span>UI / UX Design</span><span>Cloud &amp; DevOps</span><span>QA &amp; Testing</span><span>Dedicated Teams</span><span>Digital Marketing</span>
+  </div>
+</div>
+
+<!-- ===================== SERVICES ===================== -->
+<section class="section-pad" id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">What we do</span>
+      <h2 class="h2">Everything a software partner should — <span class="serif-em">under one roof.</span></h2>
+      <p class="lead">Whether you need a whole product built or an extra team to move faster, we cover the full stack of design, engineering and growth.</p>
+    </div>
+    <div class="svc-grid">
+      <!-- 1 -->
+      <article class="svc-card reveal">
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></div>
+        <h3>Custom Web Apps</h3>
+        <p>Fast, secure web applications and dashboards built on modern frameworks — from MVP to production scale.</p>
+        <span class="tag">React · Next.js · Node →</span>
+      </article>
+      <!-- 2 -->
+      <article class="svc-card reveal d1">
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></svg></div>
+        <h3>Mobile Apps</h3>
+        <p>Native and cross-platform iOS &amp; Android apps that feel effortless and ship to both stores.</p>
+        <span class="tag">Swift · Kotlin · Flutter →</span>
+      </article>
+      <!-- 3 -->
+      <article class="svc-card reveal d2">
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9a3 3 0 013-3h12a3 3 0 013 3M3 9v6a3 3 0 003 3h12a3 3 0 003-3V9M3 9h18"/><circle cx="7" cy="12.5" r="1"/></svg></div>
+        <h3>SaaS Platforms</h3>
+        <p>Multi-tenant products with billing, auth and analytics — engineered to grow with your users.</p>
+        <span class="tag">Multi-tenant · Billing →</span>
+      </article>
+      <!-- 4 -->
+      <article class="svc-card reveal d3">
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a14 14 0 000 18M3 12h18"/></svg></div>
+        <h3>Dedicated Teams</h3>
+        <p>Borrow vetted engineers, designers and PMs who plug straight into your workflow and tools.</p>
+        <span class="tag">Staff augmentation →</span>
+      </article>
+      <!-- 5 -->
+      <article class="svc-card reveal">
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M2 12h3M19 12h3M12 2v3M12 19v3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div>
+        <h3>UI / UX &amp; Brand</h3>
+        <p>Research-led product design and identity that people actually enjoy using — and remember.</p>
+        <span class="tag">Design systems →</span>
+      </article>
+      <!-- 6 -->
+      <article class="svc-card reveal d1">
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 000-9 6 6 0 00-11.6-1.5A4 4 0 005 19z"/></svg></div>
+        <h3>Cloud &amp; DevOps</h3>
+        <p>CI/CD pipelines, infrastructure-as-code and observability so releases are calm, not chaotic.</p>
+        <span class="tag">AWS · Docker · K8s →</span>
+      </article>
+      <!-- 7 -->
+      <article class="svc-card reveal d2">
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+        <h3>QA &amp; Testing</h3>
+        <p>Automated and manual testing baked into delivery, so quality is a habit — not a final scramble.</p>
+        <span class="tag">Automation · E2E →</span>
+      </article>
+      <!-- 8 -->
+      <article class="svc-card reveal d3">
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-7-7 18-2.5-8.5L3 11z"/></svg></div>
+        <h3>Digital Marketing</h3>
+        <p>Content, social and email that turn a finished product into a growing audience and pipeline.</p>
+        <span class="tag">Growth · Content →</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROCESS ===================== -->
+<section class="section-pad process" id="process">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">How we work</span>
+      <h2 class="h2">A simple, honest <span class="serif-em">way of working.</span></h2>
+      <p class="lead">No black boxes. You see progress every week and own everything we build, from the first commit.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="num">01</div><h3>Discover</h3><p>We listen first — goals, users and constraints — then shape a clear scope and a realistic plan.</p></div>
+      <div class="step reveal d1"><div class="num">02</div><h3>Design</h3><p>Flows, wireframes and a polished UI you can click through before a line of production code is written.</p></div>
+      <div class="step reveal d2"><div class="num">03</div><h3>Build</h3><p>Short sprints, weekly demos and a shared board. You always know what's shipping and what's next.</p></div>
+      <div class="step reveal d3"><div class="num">04</div><h3>Launch &amp; grow</h3><p>We ship, monitor and iterate — then stay on to support, scale and improve with real usage.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TECH STACK ===================== -->
+<section class="section-pad" id="stack">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Tech stack</span>
+      <h2 class="h2">Modern tools, chosen for <span class="serif-em">the job.</span></h2>
+      <p class="lead">We're stack-agnostic and pragmatic — here's what we reach for most when speed and reliability matter.</p>
+    </div>
+    <div class="tech-groups">
+      <div class="tech-col reveal">
+        <h4>Frontend</h4>
+        <ul><li><b></b>React &amp; Next.js</li><li><b></b>TypeScript</li><li><b></b>Vue &amp; Nuxt</li><li><b></b>Tailwind CSS</li><li><b></b>React Native</li></ul>
+      </div>
+      <div class="tech-col reveal d1">
+        <h4>Backend</h4>
+        <ul><li><b></b>Node &amp; NestJS</li><li><b></b>Java &amp; Spring Boot</li><li><b></b>Python &amp; Django</li><li><b></b>Laravel / PHP</li><li><b></b>Go</li><li><b></b>GraphQL &amp; REST</li></ul>
+      </div>
+      <div class="tech-col reveal d2">
+        <h4>Mobile</h4>
+        <ul><li><b></b>Swift (iOS)</li><li><b></b>Kotlin (Android)</li><li><b></b>Flutter</li><li><b></b>React Native</li><li><b></b>Expo</li></ul>
+      </div>
+      <div class="tech-col reveal d3">
+        <h4>Cloud &amp; Data</h4>
+        <ul><li><b></b>AWS &amp; GCP</li><li><b></b>Docker &amp; Kubernetes</li><li><b></b>PostgreSQL</li><li><b></b>MongoDB</li><li><b></b>CI/CD pipelines</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WORK / PORTFOLIO ===================== -->
+<section class="section-pad" id="work" style="background:var(--bg-warm)">
+  <div class="wrap">
+    <div class="section-head reveal" style="margin-bottom:18px">
+      <span class="eyebrow">Selected work</span>
+      <h2 class="h2">Products we built, <span class="serif-em">end to end.</span></h2>
+      <p class="lead">A glimpse of what comes out of the studio — owned, shipped and live.</p>
+    </div>
+
+    <!-- Case 1: SnapMyCV -->
+    <article class="case reveal" style="margin-top:54px">
+      <div class="case-media">
+        <div class="case-frame">
+          <img class="shot" src="images/snapmycv.webp" alt="SnapMyCV resume builder homepage" width="1600" height="1000" loading="lazy">
+        </div>
+      </div>
+      <div class="case-body">
+        <div class="case-badge"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg>Product · Web App</div>
+        <h3>SnapMyCV</h3>
+        <p>A resume builder that turns a blank page into a polished, recruiter-ready CV in minutes — clean templates, instant export and a friendly editor anyone can use.</p>
+        <div class="meta">
+          <div><div class="k">Type</div><div class="v">SaaS · Web</div></div>
+          <div><div class="k">Scope</div><div class="v">Design → Build → Launch</div></div>
+          <div><div class="k">Status</div><div class="v">Live</div></div>
+        </div>
+        <div class="stack-tags"><span>React</span><span>Node</span><span>PDF Engine</span><span>Stripe</span></div>
+        <a class="link-arrow" href="https://snapmycv.com" target="_blank" rel="noopener">Visit snapmycv.com
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
         </a>
       </div>
-    </section>
+    </article>
 
-    <section class="tech text-center" aria-labelledby="Technoclogies">
-      <h2 class="text-primary700">Technologies we offer</h2>
+    <!-- Case 2: Shakya Dynasty -->
+    <article class="case flip reveal">
+      <div class="case-media">
+        <div class="case-frame">
+          <img class="shot" src="images/shakyadynasty.webp" alt="Shakya Dynasty live gold and silver price website" width="1600" height="1000" loading="lazy">
+        </div>
+      </div>
+      <div class="case-body">
+        <div class="case-badge"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg>Product · Brand &amp; Web</div>
+        <h3>Shakya Dynasty</h3>
+        <p>A digital home for the Shakya Dynasty brand — identity, storytelling and a polished web presence built to look as considered as the work behind it.</p>
+        <div class="meta">
+          <div><div class="k">Type</div><div class="v">Brand · Web</div></div>
+          <div><div class="k">Scope</div><div class="v">Identity → Web build</div></div>
+          <div><div class="k">Status</div><div class="v">Live</div></div>
+        </div>
+        <div class="stack-tags"><span>Next.js</span><span>Design System</span><span>CMS</span></div>
+        <a class="link-arrow" href="https://shakyadynasty.com" target="_blank" rel="noopener">Visit shakyadynasty.com
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+        </a>
+      </div>
+    </article>
+  </div>
+</section>
 
-      <div class="container">
-        <p class="text-balance summarized">
-          We provide remote staffing and product development offer a win-win
-          scenario for both businesses and workers, providing opportunities for
-          growth, innovation, and success in today's digital age.
-        </p>
+<!-- ===================== WHY US / STATS ===================== -->
+<section class="section-pad why" id="why">
+  <div class="wrap why-grid">
+    <div class="reveal">
+      <span class="eyebrow">Why The Third Sourcers</span>
+      <h2 class="h2" style="margin:.6rem 0 1.1rem">A partner, <span class="serif-em">not just a vendor.</span></h2>
+      <p class="lead" style="color:var(--ink-soft)">We're a small, senior team that cares about the outcome — clear communication, dependable delivery and code you'd be happy to inherit.</p>
+      <ul class="feature-list">
+        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><b>Senior people, directly</b><span class="d">You work with the engineers and designers doing the work — no layers in between.</span></div></li>
+        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><b>Flexible engagement</b><span class="d">Build a whole product with us, or extend your team for as long as you need.</span></div></li>
+        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><b>You own everything</b><span class="d">Code, designs and accounts are yours from day one — no lock-in, ever.</span></div></li>
+      </ul>
+    </div>
+    <div class="stat-cards reveal d1">
+      <div class="sc"><div class="n">100<span class="serif-em">%</span></div><div class="l">Code &amp; IP ownership stays with you</div></div>
+      <div class="sc"><div class="n">5<span class="serif-em">★</span></div><div class="l">The standard we hold every release to</div></div>
+      <div class="sc"><div class="n">8</div><div class="l">Disciplines, from design to DevOps</div></div>
+      <div class="sc"><div class="n">2</div><div class="l">In-house products shipped &amp; live</div></div>
+    </div>
+  </div>
+</section>
 
-        <ul class="tech-lists" data-row="1">
-          <li><span>Java</span></li>
-          <li><span>Android</span></li>
-          <li><span>Laravel</span></li>
-          <li><span>React</span></li>
-          <li><span>Angular</span></li>
-          <li><span>Wordpress</span></li>
-          <li><span>Node JS</span></li>
-          <li><span>Express</span></li>
-          <li><span>UI/UX</span></li>
-          <li><span>iOS</span></li>
-          <li><span>Flutter</span></li>
-          <li><span>AWS</span></li>
+<!-- ===================== ENGAGEMENT MODELS ===================== -->
+<section class="section-pad engage" id="engage">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Engagement models</span>
+      <h2 class="h2">Work with us, <span class="serif-em">your way.</span></h2>
+      <p class="lead">Three simple ways to get started. Not sure which fits? Book a call and we'll help you choose.</p>
+    </div>
+    <div class="plans">
+      <div class="plan reveal">
+        <div class="pin">Project</div>
+        <h3>Build my product</h3>
+        <div class="price"><b>Fixed scope</b>Idea to launch, one clear deliverable</div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Discovery &amp; product scope</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Design, build &amp; QA</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Launch &amp; handover</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Fixed timeline &amp; price</li>
         </ul>
-
-        <ul class="tech-lists reverse" data-row="2">
-          <li><span>Full Stack Developer</span></li>
-          <li><span>Project Manager</span></li>
-          <li><span>React Native</span></li>
-          <li><span>ML Engineer</span></li>
-          <li><span>AI Engineer</span></li>
-          <li><span>Data Science</span></li>
-          <li><span>Power BI</span></li>
-          <li><span>Rust</span></li>
+        <a href="#contact" class="btn btn-on-dark-ghost">Start a project</a>
+      </div>
+      <div class="plan featured reveal d1" style="position:relative">
+        <span class="ribbon">Most popular</span>
+        <div class="pin">Dedicated team</div>
+        <h3>Extend my team</h3>
+        <div class="price"><b>Monthly</b>Vetted engineers &amp; designers, full-time</div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Hand-picked to your stack</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Plugs into your tools &amp; rituals</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Scale up or down monthly</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>One point of contact</li>
         </ul>
+        <a href="#contact" class="btn btn-primary">Hire developers</a>
+      </div>
+      <div class="plan reveal d2">
+        <div class="pin">Retainer</div>
+        <h3>Support &amp; grow</h3>
+        <div class="price"><b>Ongoing</b>Maintenance, iteration &amp; growth</div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Bug fixes &amp; improvements</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>New features on a cadence</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Monitoring &amp; uptime</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Marketing &amp; growth support</li>
+        </ul>
+        <a href="#contact" class="btn btn-on-dark-ghost">Talk retainer</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <ul class="tech-lists" data-row="3">
-          <li><span>Mongo</span></li>
-          <li><span>NoSql</span></li>
-          <li><span>QA</span></li>
-          <li><span>ROR</span></li>
-          <li><span>Postgres</span></li>
-          <li><span>Kotlin</span></li>
-          <li><span>Frontend Developer</span></li>
-          <li><span>Backend Developer</span></li>
-          <li><span>Tableau</span></li>
-          <li><span>Python</span></li>
+<!-- ===================== CONTACT ===================== -->
+<section class="section-pad" id="contact">
+  <div class="wrap" style="max-width:760px">
+    <div class="section-head reveal" style="text-align:center;margin-inline:auto;max-width:600px">
+      <span class="eyebrow">Let's talk</span>
+      <h2 class="h2" style="margin:.6rem 0 1rem">Tell us what you're <span class="serif-em">building.</span></h2>
+      <p class="lead" style="color:var(--ink-soft);margin:0 auto">Book a free, no-pressure call. We'll listen, ask good questions and tell you honestly how we'd approach it.</p>
+    </div>
+
+    <div class="contact-info reveal d1" style="max-width:560px;margin:34px auto 0">
+      <div class="ci">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
+        <div><div class="k">Email</div><div class="v"><a href="mailto:hello@thethirdsourcers.com">hello@thethirdsourcers.com</a></div></div>
+      </div>
+      <div class="ci">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012 4.2 2 2 0 014 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.6a2 2 0 01-.5 2.1L8 9.6a16 16 0 006 6l1.2-1.1a2 2 0 012.1-.5c.8.3 1.7.5 2.6.6a2 2 0 011.7 2z"/></svg></div>
+        <div><div class="k">Phone &amp; WhatsApp</div><div class="v"><a href="tel:+9779803333267">+977 9803333267</a> · <a href="tel:+9779808546858">+977 9808546858</a></div></div>
+      </div>
+      <div class="ci">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div><div class="k">Studio</div><div class="v">Lalitpur, Nepal · Working worldwide</div></div>
+      </div>
+    </div>
+
+    <div class="reveal d2" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:34px">
+      <a href="tel:+9779803333267" class="btn btn-primary btn-lg">Book a call
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a href="mailto:hello@thethirdsourcers.com" class="btn btn-ghost btn-lg">Email us</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA BAND ===================== -->
+<section class="cta-band wrap" style="padding-bottom:clamp(72px,11vw,140px)">
+  <div class="cta-inner reveal">
+    <img class="knot" src="assets/logo-mark-white.svg" style="width:380px; top:-60px; right:-40px;" alt="">
+    <span class="eyebrow" style="color:var(--terra-2)">Ready when you are</span>
+    <h2 style="margin-top:.6rem">Let's build something worth shipping.</h2>
+    <p>Whether it's a brand-new product or an extra pair of hands, we'd love to hear about it.</p>
+    <a href="#contact" class="btn btn-light btn-lg">Book a free call
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a class="brand" href="#top"><img src="assets/logo-mark-white.svg" alt=""><span class="bname" style="color:#fff">The Third Sourcers</span></a>
+        <p class="fdesc">A software studio and remote team you can borrow. We design, build and ship web, mobile and SaaS products — and stay to help them grow.</p>
+        <div class="socials">
+          <a href="https://www.facebook.com/people/The-Third-Sourcers/61557065408034/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-2 0-3 1-3 3v2H9v3h2v7h3v-7h2.5l.5-3H14V9c0-.6.4-1 1-1z"/></svg></a>
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 8A1.5 1.5 0 116.5 5a1.5 1.5 0 010 3zM5 9.5h3V19H5zM10 9.5h2.9v1.3h.04c.4-.75 1.4-1.55 2.86-1.55C18.8 9.25 20 11 20 13.8V19h-3v-4.6c0-1.1-.02-2.5-1.55-2.5-1.55 0-1.79 1.2-1.79 2.43V19h-3z"/></svg></a>
+          <a href="mailto:hello@thethirdsourcers.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">Web apps</a></li>
+          <li><a href="#services">Mobile apps</a></li>
+          <li><a href="#services">SaaS platforms</a></li>
+          <li><a href="#services">Dedicated teams</a></li>
+          <li><a href="#services">UI / UX design</a></li>
         </ul>
       </div>
-    </section>
-
-    <section id="work-with-us" class="work-with-us">
-      <h2 class="text-primary700 text-center">Work with the third sourcers</h2>
-
-      <div class="container">
-        <p class="text-center text-balance summarized">
-          We provide team of experienced and skilled developers who are
-          proficient in various technologies which enables delivery high-quality
-          solutions that meet the specific needs of our clients.
-        </p>
-
-        <ul class="d-grid">
-          <li style="--_cardBg: var(--clr-primary500)">
-            <h3>Risk-Free Hiring</h3>
-            <p>
-              Our meticulous screening ensures risk-free hiring, connecting you
-              with top experts for ongoing high-quality support.
-            </p>
-          </li>
-          <li style="--_cardBg: var(--clr-secondary600)">
-            <h3>Can work across all time zones</h3>
-            <p>
-              The flexibility to work seamlessly across all time zones, ensuring
-              continuous and efficient collaboration on a global scale.
-            </p>
-          </li>
-          <li style="--_cardBg: var(--clr-accent500)">
-            <h3>Talent Tank</h3>
-            <p>
-              An extensive talent pool of top-notch developers to our client
-              organizations. Thanks to our thorough verification procedure, only
-              the most qualified and experienced experts enter our talent pool.
-            </p>
-          </li>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#process">How we work</a></li>
+          <li><a href="#work">Our work</a></li>
+          <li><a href="#why">Why us</a></li>
+          <li><a href="#engage">Engagement</a></li>
         </ul>
       </div>
-    </section>
-
-    <section id="services" class="our-services">
-      <div class="container">
-        <h2>
-          We follow a systematic approach to product development and prioritise
-          customer satisfaction, create products that meet your needs while also
-          delivering value to your bottom line
-        </h2>
-
-        <ul class="d-grid our-services--list">
-          <li>
-            <figure>
-              <img
-                src="./images/application-development.webp"
-                alt="Thumb - Application Development"
-              />
-            </figure>
-            <div>
-              <h3 class="text-primary700">Application Development</h3>
-              <p>
-                We ensure applications are built to the highest standards of
-                quality, security, and functionality. The development process
-                typically follows a series of stages, including analysis,
-                design, coding, testing, and deployment.
-              </p>
-            </div>
-          </li>
-          <li>
-            <figure>
-              <img
-                src="./images/brand-elements.webp"
-                alt="Thumb - Brand Design Elements"
-              />
-            </figure>
-            <div>
-              <h3 class="text-primary700">Brand Design</h3>
-              <p>
-                Our goal is to create a memorable and recognisable brand that
-                resonates with the target audience and sets the company apart
-                from its competitors. Effective brand design can help to build
-                brand loyalty, increase customer recognition, and ultimately
-                drive business growth.
-              </p>
-            </div>
-          </li>
-          <li>
-            <figure>
-              <img
-                src="./images/digital-marketing.webp"
-                alt="Thumb - Digital Marketing"
-              />
-            </figure>
-            <div>
-              <h3 class="text-primary700">Digital Marketing</h3>
-              <p>
-                We help businesses of all sizes reach their target customers
-                online via use of social media marketing, content marketing,
-                email marketing, and other digital channels.
-              </p>
-            </div>
-          </li>
+      <div class="footer-col">
+        <h5>Get in touch</h5>
+        <ul>
+          <li><a href="mailto:hello@thethirdsourcers.com">hello@thethirdsourcers.com</a></li>
+          <li><a href="tel:+9779803333267">+977 9803333267</a></li>
+          <li><a href="tel:+9779808546858">+977 9808546858</a></li>
+          <li>Lalitpur, Nepal</li>
         </ul>
       </div>
-    </section>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> The Third Sourcers. All rights reserved.</span>
+      <span>Built with care · Web · Mobile · SaaS</span>
+    </div>
+  </div>
+</footer>
 
-    <section id="contact" class="contact">
-      <div class="container">
-        <h2>
-          Give us a call or drop by anytime, we endeavour to answer all
-          enquiries within 24 hours on business days. We will be happy to answer
-          your questions.
-        </h2>
-        <h3 class="d-grid">
-          <span>Message us at:</span>
-          <a href="mailto:hello@thethirdsourcers.com">
-            hello@thethirdsourcers.com
-          </a>
-        </h3>
-
-        <p class="bottom-content">&copy; Copyright the third sourcers</p>
-      </div>
-    </section>
-  </body>
+<script src="main.js"></script>
+</body>
 </html>

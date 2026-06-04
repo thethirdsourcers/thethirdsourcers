@@ -4,51 +4,34 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-Static marketing website for The Third Sourcers — a remote staffing and product development company based in Nepal. Three pages: `index.html`, `about.html`, `co-working-space.html`. No framework, no package manager.
+Single-page static marketing website for The Third Sourcers — a software studio and remote-staffing company based in Lalitpur, Nepal that builds web, mobile and SaaS products and provides dedicated engineering teams. One page: `index.html`. No framework, no package manager, no build step.
 
-## Compiling SCSS
+This site was rebuilt from a high-fidelity design handoff. The design source lives in `~/Downloads/design_handoff_third_sourcers_site/` (prototype HTML/CSS/JS) and `README.md` there documents every token, section, and interaction in detail — consult it before making structural changes.
 
-The site uses SCSS compiled to `styles/styles.css`. There is no build script — compile manually:
+## Architecture
 
-```bash
-# One-time compile
-sass styles/styles.scss styles/styles.css
-
-# Watch mode during development
-sass styles/styles.scss styles/styles.css --watch
-```
-
-Always commit the compiled `styles/styles.css` alongside any SCSS changes.
-
-## SCSS architecture
-
-`styles/styles.scss` is the entry point that `@use`s four layers in order:
-
-| Layer | Path | Purpose |
-|-------|------|---------|
-| `base` | `styles/base/` | Reset, font-face declarations, element defaults, dark mode |
-| `components` | `styles/components/` | Navigation, button styles |
-| `utilities` | `styles/utilities/` | Utility classes (`d-flex`, `d-grid`, `text-*`, etc.) |
-| `layout` | `styles/layout/` | Per-section styles (hero, header, tech, about, coworking) |
-
-The `abstract/` folder (`_colors.scss`, `_typography.scss`, `_mixins.scss`) holds design tokens only — it is `@use`d by other partials but never directly in `styles.scss`.
+- `index.html` — full page markup. One continuously-scrolling page: header/nav, hero, capabilities marquee, services, process, tech stack, portfolio, why-us/stats, engagement models, contact, CTA band, footer.
+- `styles.css` — complete hand-written stylesheet (plain CSS, edited directly — there is **no** SCSS/build step anymore). Imports Google Fonts at the top and defines all design tokens as CSS custom properties in `:root`.
+- `main.js` — vanilla JS (~40 lines): sticky-header-on-scroll, mobile menu open/close, IntersectionObserver reveal-on-scroll, footer year injection.
+- `assets/` — logo SVGs: `logo-mark.svg` / `logo-mark-white.svg` (knot mark, used in lockups paired with HTML text) and `logo.svg` / `logo-white.svg` (full logo). Violet gradient `#492CD4 → #462CBD`.
+- `images/` — product screenshots: `snapmycv.webp` (used in the hero glass-card AND the SnapMyCV portfolio case) and `shakyadynasty.webp` (Shakya Dynasty portfolio case). Regenerate by screenshotting the live sites and converting with `cwebp`.
+- Favicons (`favicon.ico`, `Favicon.svg`, `Favicon-white.svg`) at the repo root.
 
 ## Design tokens
 
-Colors are defined as a nested SCSS map `$colorSchemes` in `styles/abstract/_colors.scss` and compiled to CSS custom properties in `styles/base/_root.scss` via `@each`. The resulting property naming pattern is `--clr-{scheme}{weight}` (e.g. `--clr-primary700`, `--clr-accent400`).
+All tokens are CSS custom properties in `styles.css` `:root`. Naming: warm neutrals (`--bg`, `--bg-warm`, `--bg-lilac`, `--paper`), ink (`--ink`, `--ink-soft`, `--ink-faint`), brand violet (`--violet` `#492CD4`, `--violet-2`, `--violet-deep`, `--on-violet`), warm terracotta accent (`--terra`, `--terra-2`, `--terra-tint`), plus radii (`--r-sm`/`--r`/`--r-lg`/`--r-xl`), shadows (`--shadow-sm/md/lg`), and layout (`--maxw: 1200px`, `--pad`). Never hardcode color values in section rules — use the custom properties.
 
-Dark mode swaps a subset of root variables under `@media (prefers-color-scheme: dark)` — do not hardcode color values in layout/component files; use the CSS custom properties.
+Fonts (Google Fonts CDN, imported at the top of `styles.css`):
+- `--sans` → **Hanken Grotesk** (UI, body, most headings)
+- `--serif` → **Instrument Serif** (italic emphasis words only, via `.serif-em`)
 
-Fonts:
-- `--systemFont` → PT Sans (body text)
-- `--headerFont` → K2D (all `h1`–`h6` elements)
+## Conventions
 
-Both are self-hosted under `fonts/` as `.woff` + `.woff2` pairs.
+- Section backgrounds: light sections use `--bg`/`--bg-warm`; the Process and Engagement sections plus the footer are dark (`--violet-deep`) and recolor eyebrows/ticks to terracotta.
+- Reveal-on-scroll: add `.reveal` (and optional `.d1`–`.d4` stagger) to any element; `main.js` adds `.in` when it intersects. Disabled under `prefers-reduced-motion`.
+- Product screenshots fill the design's image slots via the `.shot` class (`object-fit: cover`); `.glass-card .shot` and `.case-frame .shot` set the aspect ratios.
+- Contact CTAs are `mailto:`/`tel:` links — there is no contact form and no backend.
 
-## Tech marquee animation
+## Responsive breakpoints
 
-The scrolling tech-stack rows on `index.html` use a CSS-only trick: all `<li>` items inside `.tech-lists` share `grid-area: 1/1` so they overlap in one cell, then each item is offset with a calculated `animation-delay` and loops through `translateX`. `data-row="1|2|3"` selects the animation keyframe and direction. Item counts are hardcoded in `_tech.scss` as `$firstRow`, `$secondRow`, `$thirdRow` — update these variables if the number of `<li>` items in that row changes.
-
-## Mobile navigation
-
-The hamburger menu is a pure-CSS checkbox hack — `<input type="checkbox" id="toggle-menu-checkbox">` toggled by a `<label>` and styled in `styles/components/_navigation.scss`. No JavaScript is involved.
+1020px (grids → 2 cols), 860px (nav → hamburger checkbox-free JS menu, hero/why/case → single column, hero visual hidden), 560px (all grids → 1 col, body 17px, header CTA/subtitle hidden), 400px (stat cards → 1 col, smaller display/menu).
