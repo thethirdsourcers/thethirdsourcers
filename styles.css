@@ -177,7 +177,7 @@ p{ text-wrap:pretty; }
 .dot-ico{ width:40px;height:40px;border-radius:12px; display:grid;place-items:center; flex:none; }
 
 /* real product screenshots that fill the design's image slots */
-.shot{ width:100%; display:block; object-fit:cover; object-position:top center; border-radius:14px; }
+.shot{ width:100%; height:auto; display:block; object-fit:cover; object-position:top center; border-radius:14px; }
 .glass-card .shot{ aspect-ratio:4/3.2; border-radius:16px; }
 .case-frame .shot{ aspect-ratio:16/10; border-radius:14px; }
 
