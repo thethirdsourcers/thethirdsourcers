@@ -2,6 +2,31 @@
 (function () {
   'use strict';
 
+  // Theme Toggle
+  var themeToggle = document.getElementById('themeToggle');
+  var htmlElement = document.documentElement;
+  
+  // Check for saved theme preference or system preference
+  var savedTheme = localStorage.getItem('theme');
+  var systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  
+  if (savedTheme) {
+    htmlElement.setAttribute('data-theme', savedTheme);
+  } else if (systemPrefersDark) {
+    htmlElement.setAttribute('data-theme', 'dark');
+  }
+  
+  function toggleTheme() {
+    var currentTheme = htmlElement.getAttribute('data-theme');
+    var newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    htmlElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  }
+  
+  if (themeToggle) {
+    themeToggle.addEventListener('click', toggleTheme);
+  }
+
   // Footer year
   var y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();

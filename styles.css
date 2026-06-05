@@ -6,13 +6,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..800;1,400..600&family=Instrument+Serif:ital@0;1&display=swap");
 
 :root {
-  /* warm neutrals */
+  /* warm neutrals - light mode */
   --bg: #fbf8f3;
   --bg-warm: #f4eee4;
   --bg-lilac: #efebfb;
   --paper: #ffffff;
 
-  /* ink */
+  /* ink - light mode */
   --ink: #1b1630;
   --ink-soft: #5c5570;
   --ink-faint: #8b8499;
@@ -29,10 +29,11 @@
   --terra-2: #e9a982;
   --terra-tint: #f8e7da;
 
-  /* lines & fields */
+  /* lines & fields - light mode */
   --line: rgba(27, 22, 48, 0.1);
   --line-2: rgba(27, 22, 48, 0.16);
 
+  /* shadows - light mode */
   --shadow-sm:
     0 1px 2px rgba(27, 22, 48, 0.05), 0 2px 8px rgba(27, 22, 48, 0.04);
   --shadow-md:
@@ -47,9 +48,31 @@
 
   --maxw: 1440px;
   --pad: clamp(20px, 5vw, 64px);
-
   --sans: "Hanken Grotesk", system-ui, -apple-system, sans-serif;
   --serif: "Instrument Serif", Georgia, serif;
+}
+
+/* Dark mode styles */
+[data-theme="dark"] {
+  /* warm neutrals - dark mode */
+  --bg: #120f1d;
+  --bg-warm: #1a1726;
+  --bg-lilac: #241f3a;
+  --paper: #1e192e;
+
+  /* ink - dark mode */
+  --ink: #f3effd;
+  --ink-soft: #c9c2da;
+  --ink-faint: #8b8499;
+
+  /* lines & fields - dark mode */
+  --line: rgba(243, 239, 253, 0.1);
+  --line-2: rgba(243, 239, 253, 0.16);
+
+  /* shadows - dark mode */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 8px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.25), 0 18px 40px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 12px 30px rgba(0, 0, 0, 0.3), 0 40px 80px rgba(0, 0, 0, 0.4);
 }
 
 * {
@@ -245,6 +268,53 @@ p {
 .btn-lg {
   font-size: 1.06rem;
   padding: 1.05em 1.8em;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  border: 1px solid var(--line-2);
+  background: var(--paper);
+  color: var(--ink);
+  cursor: pointer;
+  transition:
+    transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.25s,
+    background 0.2s,
+    color 0.2s;
+}
+.theme-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+.theme-toggle svg {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+.theme-toggle .icon-sun {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+.theme-toggle .icon-moon {
+  opacity: 0;
+  transform: rotate(-90deg);
+}
+[data-theme="dark"] .theme-toggle .icon-sun {
+  opacity: 0;
+  transform: rotate(90deg);
+}
+[data-theme="dark"] .theme-toggle .icon-moon {
+  opacity: 1;
+  transform: rotate(0deg);
 }
 
 /* ---------- header / nav ---------- */
