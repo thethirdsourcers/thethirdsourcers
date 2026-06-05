@@ -1,7 +1,0 @@
-@use '../abstract' as *;
-
-.btn {
-	&.is-cta {
-		@include buttons('cta', 'light', true)
-	}
-}
