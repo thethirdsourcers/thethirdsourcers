@@ -534,6 +534,9 @@ p {
 .menu-toggle {
   display: none;
 }
+[data-theme="dark"] .menu-toggle svg {
+  color: #fff;
+}
 
 /* ---------- hero ---------- */
 .hero {
