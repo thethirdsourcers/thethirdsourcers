@@ -2243,6 +2243,12 @@ button {
   .hero-copy {
     padding-bottom: 20px;
   }
+  /* keep the three-parties art from stacking right under the hero art */
+  .parties-art {
+    order: 2;
+    max-width: 480px;
+    margin: 0 auto;
+  }
   .hero-visual {
     max-width: 440px;
     margin: 0 auto;
