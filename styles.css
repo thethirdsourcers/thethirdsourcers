@@ -466,6 +466,9 @@ button {
 .menu-toggle {
   display: none;
 }
+[data-theme="dark"] .menu-toggle svg {
+  color: #fff;
+}
 
 /* mobile menu */
 .mobile-menu {
