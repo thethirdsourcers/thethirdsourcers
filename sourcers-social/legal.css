@@ -1,0 +1,92 @@
+/* Sourcers Social — product and legal pages. Standalone: not linked from the homepage. */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..800;1,9..40,400&family=Noto+Sans+Devanagari:wght@400;600&display=swap");
+
+:root {
+  --bg: #ffffff;
+  --bg-soft: #f5f7fc;
+  --bg-lilac: #eeebff;
+  --ink: #1f2255;
+  --ink-soft: #545775;
+  --ink-faint: #9aa0bd;
+  --violet: #492cd4;
+  --navy: #1f2255;
+  --coral: #ff7a50;
+  --line: rgba(31, 34, 85, 0.1);
+  --r: 14px;
+  --maxw: 820px;
+}
+:root:not([data-theme="light"]) {
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12142e;
+    --bg-soft: #1a1d3f;
+    --bg-lilac: #25295a;
+    --ink: #eef0ff;
+    --ink-soft: #b7bbd9;
+    --ink-faint: #7e84ab;
+    --violet: #9d8cff;
+    --line: rgba(238, 240, 255, 0.12);
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.65 "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+a { color: var(--violet); }
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 16px; }
+
+header.top { border-bottom: 1px solid var(--line); }
+header.top .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; min-height: 64px; padding-top: 10px; padding-bottom: 10px; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 700; font-size: 18px; }
+.brand img { width: 30px; height: 30px; }
+.brand small { font-weight: 500; color: var(--ink-faint); font-size: 13px; }
+nav.legal-nav { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 14px; }
+nav.legal-nav a { color: var(--ink-soft); text-decoration: none; }
+nav.legal-nav a[aria-current="page"], nav.legal-nav a:hover { color: var(--violet); }
+
+main.wrap { padding-top: 40px; padding-bottom: 56px; }
+h1 { font-size: clamp(28px, 5vw, 40px); line-height: 1.15; margin: 0 0 8px; letter-spacing: -0.01em; }
+h2 { font-size: 21px; margin: 36px 0 8px; }
+h3 { font-size: 17px; margin: 22px 0 6px; }
+p, li { color: var(--ink-soft); }
+strong, b { color: var(--ink); }
+ul, ol { padding-left: 22px; }
+li { margin: 4px 0; }
+.meta { color: var(--ink-faint); font-size: 14px; margin: 0 0 28px; }
+.lead { font-size: 19px; color: var(--ink-soft); max-width: 640px; }
+
+.card { background: var(--bg-soft); border: 1px solid var(--line); border-radius: var(--r); padding: 18px 20px; margin: 18px 0; }
+.card p:first-child { margin-top: 0; }
+.card p:last-child { margin-bottom: 0; }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin: 18px 0; }
+.grid .card { margin: 0; }
+.grid h3 { margin-top: 0; }
+@media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
+
+.table-wrap { overflow-x: auto; margin: 14px 0; }
+table { border-collapse: collapse; width: 100%; font-size: 15px; }
+th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--line); color: var(--ink-soft); }
+th { color: var(--ink); font-weight: 700; background: var(--bg-soft); }
+
+.btn { display: inline-block; background: var(--coral); color: #fff; text-decoration: none; font-weight: 700; padding: 12px 20px; border-radius: 999px; }
+.btn.ghost { background: transparent; color: var(--violet); border: 1.5px solid var(--violet); }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 22px 0; }
+
+footer.bottom { border-top: 1px solid var(--line); padding: 26px 0 40px; font-size: 14px; color: var(--ink-faint); }
+footer.bottom .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; }
+footer.bottom p { margin: 0; color: var(--ink-faint); }
+footer.bottom nav { display: flex; flex-wrap: wrap; gap: 6px 18px; }
+footer.bottom a { color: var(--ink-soft); }
+@media (max-width: 560px) {
+  header.top .wrap { flex-direction: column; align-items: flex-start; }
+  .brand small { display: none; }
+}
+main, p, li, td { overflow-wrap: anywhere; }
+.np { font-family: "Noto Sans Devanagari", sans-serif; }
