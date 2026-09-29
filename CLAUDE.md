@@ -4,34 +4,34 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-Single-page static marketing website for The Third Sourcers — a software studio and remote-staffing company based in Lalitpur, Nepal that builds web, mobile and SaaS products and provides dedicated engineering teams. One page: `index.html`. No framework, no package manager, no build step.
+Single-page static marketing website for **Third Sourcers** (legal name: Third Sourcers Private Limited / थर्ड सोर्सर्स प्राइभेट लिमिटेड, Reg. No. 401634/83/84, PAN 624715513) — a software studio and remote-staffing company based in Lalitpur, Nepal that builds web, mobile and SaaS products and provides dedicated engineering teams. The brand was renamed from "The Third Sourcers" — never use "The" in copy. Main page: `index.html`. No framework, no package manager, no build step.
 
-This site was rebuilt from a high-fidelity design handoff. The design source lives in `~/Downloads/design_handoff_third_sourcers_site/` (prototype HTML/CSS/JS) and `README.md` there documents every token, section, and interaction in detail — consult it before making structural changes.
+The Sep 2026 redesign follows a flat-illustration SaaS template style (violet wavy hero, coral CTAs, navy bands, white cards). The signature section is **"Every product has three parties"** (`#three`): client → end user → Third Sourcers, tied to the logo's three orbits — keep that story central.
 
 ## Architecture
 
-- `index.html` — full page markup. One continuously-scrolling page: header/nav, hero, capabilities marquee, services, process, tech stack, portfolio, why-us/stats, engagement models, contact, CTA band, footer.
-- `styles.css` — complete hand-written stylesheet (plain CSS, edited directly — there is **no** SCSS/build step anymore). Imports Google Fonts at the top and defines all design tokens as CSS custom properties in `:root`.
-- `main.js` — vanilla JS (~40 lines): sticky-header-on-scroll, mobile menu open/close, IntersectionObserver reveal-on-scroll, footer year injection.
-- `assets/` — logo SVGs: `logo-mark.svg` / `logo-mark-white.svg` (knot mark, used in lockups paired with HTML text) and `logo.svg` / `logo-white.svg` (full logo). Violet gradient `#492CD4 → #462CBD`.
-- `images/` — product screenshots: `snapmycv.webp` (used in the hero glass-card AND the SnapMyCV portfolio case) and `shakyadynasty.webp` (Shakya Dynasty portfolio case). Regenerate by screenshotting the live sites and converting with `cwebp`.
-- Favicons (`favicon.ico`, `Favicon.svg`, `Favicon-white.svg`) at the repo root.
+- `index.html` — one scrolling page: top bar, sticky header, hero (wave), three parties, services (8 cards), navy achievement band, process (sprint-board mock + accordion), tech stack tiles, work (a plain row of product logos — grayscale until hover, then colour + one-line caption; white monochrome in dark mode), engagement plans, FAQ accordion + CTA strip, navy contact, footer (with legal/registration details).
+- `styles.css` — hand-written plain CSS (no build). Imports DM Sans + Noto Sans Devanagari from Google Fonts; all tokens in `:root`, dark-mode overrides under `[data-theme="dark"]`.
+- `main.js` — theme toggle, sticky header, mobile menu, `[data-acc]` accordions (one open at a time), back-to-top, reveal-on-scroll, footer year.
+- `assets/` — `logo.svg` / `logo-white.svg` (full lockup incl. "THIRD SOURCERS PVT. LTD."), `logo-mark.svg` / `logo-mark-white.svg` (three-orbit mark only, cropped viewBox). `images/logo.svg` is a copy used as a CSS mask by the secondary pages.
+- `images/illustrations/*.webp` — flat illustrations generated with Gemini (Nano Banana) in the brand palette, white background removed (flood-fill + trim) and exported with `cwebp`. `hero`, `three`, `launch`, `inspect`, `support` are used; `laptop` is spare.
+- `images/products/` — product logos for the work marquee (`snapmycv.svg` from snapmycv.com, `shakyadynasty.webp` from shakyadynasty.com, `jeweloop.svg` from jeweloop.com; the gold Shakya logo sits on its brand red). To add a product, add an `a.plogo` inside `.logo-row`. `images/snapmycv.webp` / `shakyadynasty.webp` screenshots are no longer used.
+- Secondary pages `about.html`, `why-hire-in-nepal.html` still use the OLD design via `styles/styles.css` (compiled from `styles/layout/*.scss`).
+- Favicons (`favicon.ico`, `Favicon.svg`, `Favicon-white.svg`) at the repo root are generated from the mark.
 
 ## Design tokens
 
-All tokens are CSS custom properties in `styles.css` `:root`. Naming: warm neutrals (`--bg`, `--bg-warm`, `--bg-lilac`, `--paper`), ink (`--ink`, `--ink-soft`, `--ink-faint`), brand violet (`--violet` `#492CD4`, `--violet-2`, `--violet-deep`, `--on-violet`), warm terracotta accent (`--terra`, `--terra-2`, `--terra-tint`), plus radii (`--r-sm`/`--r`/`--r-lg`/`--r-xl`), shadows (`--shadow-sm/md/lg`), and layout (`--maxw: 1200px`, `--pad`). Never hardcode color values in section rules — use the custom properties.
+Surfaces `--bg`, `--bg-soft`, `--bg-cream`, `--bg-lilac`, `--bg-slate`, `--paper`; ink `--ink` (navy), `--ink-soft`, `--ink-faint`; brand `--violet` `#492CD4`, `--violet-2/3`, `--violet-hero`, `--navy` `#1F2255`; accents `--coral` `#FF7A50` (primary CTA), `--sun` `#FFB400` (underline `.u-sun`, badges); radii `--r-sm/--r/--r-lg/--r-xl`; shadows `--shadow-sm/md/lg`; `--maxw: 1200px`, `--pad`. Never hardcode colors in section rules — use tokens.
 
-Fonts (Google Fonts CDN, imported at the top of `styles.css`):
-- `--sans` → **Hanken Grotesk** (UI, body, most headings)
-- `--serif` → **Instrument Serif** (italic emphasis words only, via `.serif-em`)
+Headings follow the pattern light first line + `<b>` bold second line (`.h2 b`).
 
 ## Conventions
 
-- Section backgrounds: light sections use `--bg`/`--bg-warm`; the Process and Engagement sections plus the footer are dark (`--violet-deep`) and recolor eyebrows/ticks to terracotta.
-- Reveal-on-scroll: add `.reveal` (and optional `.d1`–`.d4` stagger) to any element; `main.js` adds `.in` when it intersects. Disabled under `prefers-reduced-motion`.
-- Product screenshots fill the design's image slots via the `.shot` class (`object-fit: cover`); `.glass-card .shot` and `.case-frame .shot` set the aspect ratios.
-- Contact CTAs are `mailto:`/`tel:` links — there is no contact form and no backend.
+- Reveal-on-scroll: add `.reveal` (+ optional `.d1`–`.d4`); disabled under `prefers-reduced-motion`.
+- Motion (all in the `/* ---------- motion ---------- */` block of `styles.css`, all switched off under `prefers-reduced-motion`): top scroll-progress bar, `data-parallax="<factor>"` on illustrations (JS sets `--py`, CSS uses the `translate` property so it never fights `transform` animations), `.u-sun` underline draws in when its `.reveal` parent gets `.in`, `data-count` stats count up, sprint-board tickets/bars stagger in, slow orbit spin on the mark, bobbing tech tiles, coral-button sheen. Headless Chrome on this machine reports reduced motion ON — emulate `no-preference` when testing animations.
+- Contact CTAs are `mailto:`/`tel:` links — no form, no backend.
+- Tech logos come from the devicon CDN (`cdn.jsdelivr.net/gh/devicons/devicon`).
 
 ## Responsive breakpoints
 
-1020px (grids → 2 cols), 860px (nav → hamburger checkbox-free JS menu, hero/why/case → single column, hero visual hidden), 560px (all grids → 1 col, body 17px, header CTA/subtitle hidden), 400px (stat cards → 1 col, smaller display/menu).
+1020px (services → 2 cols, footer reflow), 860px (hamburger menu, all split grids → 1 col, stack illustration hidden, plans stacked), 560px (1-col cards, 3-col tiles, smaller brand), 400px (smaller display, stats stacked).
