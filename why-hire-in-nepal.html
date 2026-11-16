@@ -51,7 +51,7 @@
         --clr-primary500: #563dca;
         --clr-primary700: #3123ab;
         --clr-primary800: #0c0d29;
-        --clr-primary900: #0a0612;
+        --clr-primary900: #0A0612;
         --headerFont: K2D, sans-serif;
         --systemFont: PT Sans, sans-serif;
         --bodyFontColor: var(--clr-dark700);
@@ -70,11 +70,7 @@
         --bodyFontColor: var(--clr-light200);
       }
 
-      html,
-      body {
-        background-color: var(--bodyBackgroundColor);
-        color: var(--bodyFontColor);
-      }
+      html, body { background-color: var(--bodyBackgroundColor); color: var(--bodyFontColor); }
 
       .hero.why-nepal,
       .hero.about-us {
@@ -84,31 +80,18 @@
         --dot-size: 1px;
         --dot-space: 0.25rem;
         background:
-          linear-gradient(
-              90deg,
-              var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
-              transparent 1%
-            )
-            center / var(--dot-space) var(--dot-space),
-          linear-gradient(
-              var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
-              transparent 1%
-            )
-            center / var(--dot-space) var(--dot-space),
+          linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+          linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
           var(--dot-bg);
         color: var(--clr-light200);
         padding-block: clamp(3rem, 10vh, 12.5rem);
         overflow: visible;
       }
       .hero.why-nepal::before,
-      .hero.about-us::before {
-        display: none;
-      }
+      .hero.about-us::before { display: none; }
 
       .hero.why-nepal .container,
-      .hero.about-us .container {
-        gap: 1.5rem;
-      }
+      .hero.about-us .container { gap: 1.5rem; }
 
       .hero.why-nepal h1,
       .hero.about-us h1 {
@@ -128,18 +111,11 @@
         font-size: calc(1rem + 2px);
         color: var(--clr-accent300);
       }
-      .hero.why-nepal .text-primary700 {
-        color: var(--clr-primary300) !important;
-      }
+      .hero.why-nepal .text-primary700 { color: var(--clr-primary300) !important; }
 
-      section:not(.hero) {
-        padding-block: clamp(1.5rem, 7vh, 5rem);
-      }
+      section:not(.hero) { padding-block: clamp(1.5rem, 7vh, 5rem); }
 
-      main#top {
-        background: var(--bodyBackgroundColor);
-        color: var(--bodyFontColor);
-      }
+      main#top { background: var(--bodyBackgroundColor); color: var(--bodyFontColor); }
 
       .container {
         width: min(100%, 82rem);
@@ -147,27 +123,15 @@
         padding-inline: 1rem;
       }
 
-      .d-grid {
-        display: grid;
-      }
-      .text-center {
-        text-align: center;
-      }
-      .text-balance {
-        text-wrap: balance;
-      }
-      .text-accent400 {
-        color: var(--clr-accent400);
-      }
+      .d-grid { display: grid; }
+      .text-center { text-align: center; }
+      .text-balance { text-wrap: balance; }
+      .text-accent400 { color: var(--clr-accent400); }
 
       @media (prefers-color-scheme: dark) {
-        :root:not([data-theme="light"]) .text-primary700 {
-          color: var(--clr-primary300);
-        }
+        :root:not([data-theme="light"]) .text-primary700 { color: var(--clr-primary300); }
       }
-      [data-theme="dark"] .text-primary700 {
-        color: var(--clr-primary300);
-      }
+      [data-theme="dark"] .text-primary700 { color: var(--clr-primary300); }
 
       main#top .contact {
         background: transparent;
@@ -195,9 +159,7 @@
         word-break: break-all;
       }
 
-      .about-us:is(.hero) ~ section {
-        container-type: inline-size;
-      }
+      .about-us:is(.hero) ~ section { container-type: inline-size; }
       .about-us:is(.hero) ~ section > .d-grid {
         grid-template-columns: min(100%, 40ch) 1fr;
         gap: 4rem;
@@ -208,22 +170,14 @@
         top: 7rem;
         z-index: 10;
       }
-      .about-us:is(.hero) ~ section h2 span {
-        font-size: 1.25rem;
-      }
-      .about-us:is(.hero) ~ section h2 p {
-        font-size: 2rem;
-      }
-      .detail {
-        gap: 2rem;
-      }
+      .about-us:is(.hero) ~ section h2 span { font-size: 1.25rem; }
+      .about-us:is(.hero) ~ section h2 p { font-size: 2rem; }
+      .detail { gap: 2rem; }
       .services-list {
         grid-template-columns: repeat(auto-fill, minmax(min(100%, 40ch), 1fr));
         gap: 2rem;
       }
-      .services-list h3 {
-        margin-block-end: 1rem;
-      }
+      .services-list h3 { margin-block-end: 1rem; }
 
       @container (width < 768px) {
         .about-us:is(.hero) ~ section h2 {
@@ -315,14 +269,10 @@
       }
 
       @media (width < 64rem) {
-        .why-nepal-benefits .masonry-grid {
-          columns: 2;
-        }
+        .why-nepal-benefits .masonry-grid { columns: 2; }
       }
       @media (width < 40rem) {
-        .why-nepal-benefits .masonry-grid {
-          columns: 1;
-        }
+        .why-nepal-benefits .masonry-grid { columns: 1; }
       }
     </style>
   </head>
@@ -347,7 +297,7 @@
           <a href="why-hire-in-nepal.html">Why hire in Nepal</a>
         </nav>
         <div class="tb-right">
-          <a href="tel:+9779803333267"
+          <a href="tel:+9779714640735"
             ><svg
               viewBox="0 0 24 24"
               fill="none"
@@ -359,7 +309,21 @@
               <path
                 d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012 4.2 2 2 0 014 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.6a2 2 0 01-.5 2.1L8 9.6a16 16 0 006 6l1.2-1.1a2 2 0 012.1-.5c.8.3 1.7.5 2.6.6a2 2 0 011.7 2z"
               /></svg
-            >+977 9803333267</a
+            >+977 9714640735</a
+          >
+          <a href="tel:+9779714640736"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012 4.2 2 2 0 014 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.6a2 2 0 01-.5 2.1L8 9.6a16 16 0 006 6l1.2-1.1a2 2 0 012.1-.5c.8.3 1.7.5 2.6.6a2 2 0 011.7 2z"
+              /></svg
+            >+977 9714640736</a
           >
           <a href="mailto:hello@thethirdsourcers.com"
             ><svg
@@ -767,9 +731,9 @@
                   <rect x="7" y="2" width="10" height="20" rx="2.5" />
                   <path d="M11 18h2" /></svg
                 ><span
-                  ><a href="tel:+9779803333267">+977 9803333267</a><br /><a
-                    href="tel:+9779808546858"
-                    >+977 9808546858</a
+                  ><a href="tel:+9779714640735">+977 9714640735</a><br /><a
+                    href="tel:+9779714640736"
+                    >+977 9714640736</a
                   ></span
                 >
               </li>
